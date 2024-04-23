@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=42", "typing-extensions"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphgen"
+version = "0.0.1"
+authors = [
+  { name="Example Author", email="author@example.com" },
+]
+description = "A small example package"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "pydot",
+  "networkx",
+  "matplotlib"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/alexpyattaev/graphgen"
+"Bug Tracker" = "https://github.com/alexpyattaev/graphgen/issues"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+pythonpath = "src"
+addopts = "-ra -q --import-mode prepend"
+testpaths = [
+    "tests",
+]
